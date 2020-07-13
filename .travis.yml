@@ -1,7 +1,9 @@
 language: minimal
+os: osx
 osx_image: xcode11.5
 install:
   - ./brew.sh install
 script:
+  - echo $(uname)
   - ./ssh.sh genRSA
   - brew install softhsm
