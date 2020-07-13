@@ -4,4 +4,4 @@ osx_image: xcode11.5
 install:
   - ./brew.sh install
 script:
-  - brew install softhsm
+  - brew install --quiet softhsm
