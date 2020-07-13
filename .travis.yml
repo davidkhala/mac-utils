@@ -1,5 +1,6 @@
+language: minimal
 osx_image: xcode11.5
 install:
   - ./brew.sh install
 script:
-    - ./ssh.sh genRSA
+  - ./ssh.sh genRSA
