@@ -3,8 +3,8 @@ os: osx
 osx_image: xcode11.5
 install:
   - ./brew.sh install
+  - brew update # update has a long log, fold it in install section
 script:
-  - brew update --quiet
   - brew install softhsm
   - java --version
   - node --version
