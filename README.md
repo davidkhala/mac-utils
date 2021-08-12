@@ -1,5 +1,5 @@
 # mac-utils
-[![Build Status](https://travis-ci.com/davidkhala/mac-utils.svg?branch=master)](https://travis-ci.com/davidkhala/mac-utils)
+[![.github/workflows/env.yml](https://github.com/davidkhala/mac-utils/actions/workflows/env.yml/badge.svg)](https://github.com/davidkhala/mac-utils/actions/workflows/env.yml)
 
 MacOS developer utils
 
