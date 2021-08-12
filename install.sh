@@ -1,4 +1,4 @@
-installjq(){
+jQ(){
   brew install jq
 }
 $@
