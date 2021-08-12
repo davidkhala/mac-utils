@@ -1,0 +1,4 @@
+installjq(){
+  brew install jq
+}
+$@
