@@ -7,3 +7,4 @@ installCompose() {
 			echo "More details: https://docs.docker.com/docker-for-mac/install/"
 			exit 0
 }
+$@
