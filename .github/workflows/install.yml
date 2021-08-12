@@ -1,0 +1,16 @@
+name: install test
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  show-env:
+    
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: brew install softhsm
+      - run: ./docker.sh install
+      - run: brew install docker-compose
+
