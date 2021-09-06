@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: brew install softhsm
+      - run: brew update
       - run: ./docker.sh install
       - run: docker-compose version
       - run: ./nodejs.sh install
