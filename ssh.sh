@@ -26,6 +26,4 @@ genRSA() {
 copyRSAPub() {
 	pbcopy <~/.ssh/id_rsa.pub
 }
-if [[ $(uname) == "Darwin" ]]; then
-	$1
-fi
+$@
