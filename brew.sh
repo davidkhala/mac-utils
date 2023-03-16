@@ -6,6 +6,8 @@ install() {
 		echo "brew exists already"
 	fi
 }
-if [[ $(uname) == "Darwin" ]]; then
-	$1
-fi
+uninstall() {
+	brew uninstall $1
+
+}
+$@
