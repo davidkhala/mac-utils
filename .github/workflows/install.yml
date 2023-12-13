@@ -9,9 +9,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - run: brew install softhsm
+      - uses: actions/checkout@main
       - run: brew update
+      - run: brew install softhsm
       - run: ./docker.sh install
       - run: ./docker.sh installCompose
       - run: docker-compose version
