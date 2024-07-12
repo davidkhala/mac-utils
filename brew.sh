@@ -15,4 +15,7 @@ add_path(){
     	eval "$(/opt/homebrew/bin/brew shellenv)"
 
 }
+autoremove() {
+	brew doctor
+}
 $@
