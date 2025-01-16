@@ -18,4 +18,4 @@ add_path(){
 autoremove() {
 	brew doctor
 }
-$@
+"$@"
