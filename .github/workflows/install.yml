@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@main
       - run: brew update
       - run: brew install softhsm
-      - run: ./docker.sh install
-      - run: ./docker.sh installCompose
-      - run: docker-compose version
-      - run: ./nodejs.sh install
+      - run: ./apps/docker.sh install
+      - run: docker compose version
+      - run: ./language/nodejs.sh install
 

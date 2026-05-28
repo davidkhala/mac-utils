@@ -1,10 +1,11 @@
 install() {
-  brew install --cask docker
-  open -a Docker
-}
-installCompose(){
-  sudo curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
+  brew install --cask docker-desktop
+  # 不需要打开 GUI，等待 Docker daemon 启动即可
+  for i in {1..60}; do
+    docker ps > /dev/null 2>&1 && break
+    sleep 1
+  done
+
 }
 
 "$@"
