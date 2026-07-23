@@ -13,6 +13,7 @@ jobs:
       - run: brew update
       - run: brew install softhsm
       - run: ./apps/docker.sh install
+      - run: ./apps/docker.sh install-compose
       - run: docker compose version
       - run: ./language/nodejs.sh install
 

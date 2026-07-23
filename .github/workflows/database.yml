@@ -10,6 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - run: ./mssql/install.sh odbc 18
-      - run: ./mssql/install.sh odbc-uninstall 18
       - run: ./mssql/install.sh odbc 17
-      - run: ./mssql/install.sh odbc-uninstall 17
+      
