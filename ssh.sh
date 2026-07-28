@@ -26,4 +26,9 @@ genRSA() {
 copyRSAPub() {
 	pbcopy <~/.ssh/id_rsa.pub
 }
+addPassphrase() {
+	# Interactive prompt to add a passphrase to an existing private key
+	local keyPath=$1
+	ssh-add --apple-use-keychain "$keyPath"
+}
 $@
