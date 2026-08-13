@@ -1,19 +1,24 @@
 name: install test
-on: 
+on:
   push:
   workflow_dispatch:
 
 jobs:
-  show-env:
-    
+  docker:
     runs-on: macos-latest
-
     steps:
       - uses: actions/checkout@main
       - run: brew update
-      - run: brew install softhsm
       - run: ./apps/docker.sh install
       - run: ./apps/docker.sh install-compose
       - run: docker compose version
+  hsm:
+    runs-on: macos-latest
+    steps:
+      - run: brew update
+      - run: brew install softhsm
+  nodejs:
+    runs-on: macos-latest
+    steps:
+      - run: brew update
       - run: ./language/nodejs.sh install
-

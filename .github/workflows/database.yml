@@ -5,10 +5,14 @@ defaults:
   run:
     working-directory: database
 jobs:
-  build:
+  mssql:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@main
       - run: ./mssql/install.sh odbc 18
       - run: ./mssql/install.sh odbc 17
-      
+  oracle:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@main
+      - run: ./oracle.sh installClient
